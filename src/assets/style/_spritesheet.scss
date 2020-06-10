@@ -1,0 +1,30 @@
+// Helper function to compute relative position of a given cell on any axis
+@function onAxis($l, $x) {
+  @return if($l > 1, ((1 / ($l - 1)) * $x) * 100%, 0);
+}
+
+// Helper function to compute relative coordinates of a given cell within a grid
+@function inGrid($i, $w, $h) {
+
+  $x: onAxis($w, ($i - 1) % $w);
+  $y: onAxis($h, floor(($i - 1) / $w));
+
+  @return $x $y;
+}
+
+// Main mixin that will output the main class and all icon subclasses
+@mixin spritesheet($src, $col, $row) {
+
+  $relWidth: $col * 100%;
+  $nbrCells: $col * $row;
+
+  background-image: url($src);
+  background-size: $relWidth auto;
+
+  @for $key from 1 through $nbrCells {
+
+    &[data-icon="#{$key - 1}"] {
+      background-position: inGrid($key, $col, $row);
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "section_ids": ["Viridia", "Greenill", "Skyly", "Bluefull", "Purplenum", "Pinkal", "Redria", "Oran", "Yellowboze", "Whitill"],
+  "drops": [
+    {
+      "most": "Shots",
+      "least": "Slicers"
+    },
+    {
+      "most": "Rifle",
+      "least": "Swords"
+    },
+    {
+      "most": "Swords",
+      "least": "Mechguns"
+    },
+    {
+      "most": "Partisans / Rods",
+      "least": "Wands"
+    },
+    {
+      "most": "Mechguns",
+      "least": "Partisans"
+    },
+    {
+      "most": "Wands / Tech. Disks",
+      "least": "Rifles"
+    },
+    {
+      "most": "Un peu de tout",
+      "least": "Daggers"
+    },
+    {
+      "most": "Daggers",
+      "least": "Rods"
+    },
+    {
+      "most": "Meseta ???",
+      "least": "Rien"
+    },
+    {
+      "most": "Slicers",
+      "least": "Shots"
+    }
+  ],
+  "legacy_char_check_label": "Personnage Blue Burst"
+}
