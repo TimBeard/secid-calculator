@@ -1,0 +1,10 @@
+@import "../mixins/sprite-sheet";
+
+$badges: (
+  0: 'viridia', 1: 'greenill', 2: 'skyly', 3: 'bluefull', 4: 'purplenum',
+  5: 'pinkal', 6: 'redria', 7: 'oran', 8: 'yellowboze', 9: 'whitill'
+);
+
+%id-badge {
+  @include SpriteSheet('/assets/images/id-badges.svg', 4, 3, $badges);
+}
