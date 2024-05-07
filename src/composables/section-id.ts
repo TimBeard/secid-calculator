@@ -11,7 +11,17 @@ enum ASCII_CHARACTERS {
   SPACE = 0x20
 }
 
-export function useSectionId(charName: Ref<string> | string, classModifier: Ref<number> | number, isBlueBurst: Ref<boolean> | boolean): ComputedRef<number> {
+export type SectionIdData = {
+  idValue: ComputedRef<number>,
+  idName: ComputedRef<string>
+}
+
+export function useSectionId(charName: Ref<string> | string, classModifier: Ref<number> | number, isBlueBurst: Ref<boolean> | boolean): SectionIdData {
+
+  enum SectionIdVal {
+    VIRIDIA, GREENILL, SKYLY, BLUEFULL, PURPLENUM,
+    PINKAL, REDRIA, ORAN, YELLOWBOZE, WHITILL
+  }
 
   const secIdValue = computed(() => {
 
@@ -48,6 +58,11 @@ export function useSectionId(charName: Ref<string> | string, classModifier: Ref<
     }, mod) % 10
   })
 
+  const secIdName = computed(() => {
+    const value = toValue(secIdValue)
+    return (value === -1) ? '' : SectionIdVal[secIdValue.value].toLowerCase()
+  })
+
   function isStrAscii(str: string): boolean {
 
     for (let i = 0; i <= str.length; i += 1) {
@@ -62,5 +77,5 @@ export function useSectionId(charName: Ref<string> | string, classModifier: Ref<
     return true
   }
 
-  return secIdValue
+  return { idValue: secIdValue, idName: secIdName }
 }

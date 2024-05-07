@@ -18,10 +18,7 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-
-import { SectionIdVal } from '../script/section-id'
 import { useSectionId } from '../composables/section-id'
-
 import ClassSelector from './class-selector.vue'
 
 const classModifier = ref(-1)
@@ -29,12 +26,11 @@ const charName = ref('')
 const isBlueBurst = ref(true)
 
 const hasClassSelected = computed(() => classModifier.value !== -1)
-const id = useSectionId(charName, classModifier,  isBlueBurst)
+const { idName } = useSectionId(charName, classModifier,  isBlueBurst)
 
 const spriteClassName = computed(() => {
-  const idValue = SectionIdVal[id.value]
-  if (!idValue) return ''
-  return `append-badge-${idValue.toLowerCase()}-icon`
+  const { value } = idName
+  return (value === '') ? value : `append-badge-${value}-icon`
 })
 </script>
 
