@@ -1,9 +1,6 @@
 <template>
   <div class="secid-class-selector">
-    <select
-      v-model.number="classVal"
-      @change="emit('update:modelValue', classVal)"
-    >
+    <select v-model="model">
       <option value="-1" disabled>Class</option>
 
       <optgroup
@@ -24,8 +21,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-
 const groups  = [
   {
     label: 'Hunter',
@@ -92,9 +87,7 @@ const groups  = [
   }
 ]
 
-const classVal = ref(-1)
-
-const emit = defineEmits(['update:modelValue'])
+const model = defineModel()
 </script>
 
 <style lang="scss" scoped>
