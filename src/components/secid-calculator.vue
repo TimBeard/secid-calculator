@@ -1,6 +1,6 @@
 <template>
   <div :class="['secid-calculator', spriteClassName]">
-    <ClassSelector v-model="classModifier" />
+    <ClassSelector v-model.number="classModifier" />
 
     <input
       type="text"
