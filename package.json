@@ -1,34 +1,34 @@
 {
-  "name": "secid-calculator",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc && vite build",
-    "preview": "vite preview",
-    "test": "vitest run",
-    "test:coverage": "vitest run --coverage",
-    "lint": "npx @biomejs/biome check"
-  },
-  "dependencies": {
-    "vue": "^3.5.13"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.9.4",
-    "@vitejs/plugin-vue": "^5.2.1",
-    "@vue/tsconfig": "^0.7.0",
-    "@vitest/coverage-istanbul": "^3.0.2",
-    "@vue/test-utils": "^2.4.6",
-    "autoprefixer": "^10.4.20",
-    "grid-spriter": "^1.3.4",
-    "jsdom": "^24.1.3",
-    "lefthook": "^1.10.8",
-    "postcss": "^8.5.1",
-    "sass": "^1.83.4",
-    "typescript": "~5.6.2",
-    "vite": "^6.0.5",
-    "vitest": "^3.0.2",
-    "vue-tsc": "^2.2.0"
-  }
+    "name": "secid-calculator",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vue-tsc && vite build",
+        "preview": "vite preview",
+        "test": "vitest run",
+        "test:coverage": "vitest run --coverage",
+        "lint": "npx @biomejs/biome check"
+    },
+    "dependencies": {
+        "vue": "^3.5.13"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "1.9.4",
+        "@vitejs/plugin-vue": "^5.2.1",
+        "@vue/tsconfig": "^0.7.0",
+        "@vitest/coverage-istanbul": "^3.0.2",
+        "@vue/test-utils": "^2.4.6",
+        "autoprefixer": "^10.4.20",
+        "grid-spriter": "^1.3.4",
+        "jsdom": "^24.1.3",
+        "lefthook": "^1.10.8",
+        "postcss": "^8.5.1",
+        "sass": "^1.83.4",
+        "typescript": "~5.6.2",
+        "vite": "^6.0.5",
+        "vitest": "^3.0.2",
+        "vue-tsc": "^2.2.0"
+    }
 }
