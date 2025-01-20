@@ -1,4 +1,4 @@
-@import 'grid-spriter';
+@use '@timbeard/grid-spriter';
 
 $badgeParams: (
     path: '/assets/icons/',
@@ -10,7 +10,7 @@ $badgeParams: (
     type: 'background'
 );
 
-@include GridSpriter('badge', 4, 3, $badgeParams);
+@include grid-spriter.sprite('badge', 4, 3, $badgeParams);
 
 :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
