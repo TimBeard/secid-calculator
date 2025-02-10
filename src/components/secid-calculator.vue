@@ -1,10 +1,14 @@
 <template>
     <div :class="['secid-calculator', spriteClassName]">
         <ClassSelector v-model.number="classModifier" />
-        <input type="text" maxlength="10" v-model="charName" :disabled="!hasClassSelected" />
+        
+        <label>
+            <span>Name:</span>
+            <input type="text" maxlength="10" v-model="charName" :disabled="!hasClassSelected" />
+        </label>
     </div>
 
-    <label>
+    <label class="ep4-check">
         <input type="checkbox" v-model="isBlueBurst" />
         <span>Blue Burst</span>
     </label>
@@ -38,6 +42,10 @@ const spriteClassName = computed(() => {
     border: 2px solid currentColor;
     margin-bottom: 8px;
     box-sizing: border-box;
+    
+    > label {
+        position: relative;
+    }
 
     input {
         appearance: none;
@@ -67,7 +75,7 @@ const spriteClassName = computed(() => {
     }
 }
 
-label {
+.ep4-check {
     display: inline-flex;
     align-items: center;
     gap: 8px;

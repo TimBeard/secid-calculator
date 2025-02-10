@@ -45,6 +45,6 @@ describe('class-selector.vue', () => {
         })
         const defaultOption = wrapper.find('option:disabled')
         expect(defaultOption.exists()).toBe(true)
-        expect(defaultOption.text()).toBe('Class')
+        expect(defaultOption.text()).toBe('Select')
     })
 })

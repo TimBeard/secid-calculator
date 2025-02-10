@@ -1,22 +1,26 @@
 <template>
   <div class="secid-class-selector">
-    <select v-model="model">
-      <option value="-1" disabled>Class</option>
+    <label>
+      <span>Class:</span>
 
-      <optgroup
-        v-for="group in groups"
-        :key="group.label"
-        :label="group.label"
-      >
-        <option
-          v-for="option in group.options"
-          :key="group.label + option.label"
-          :value="option.value"
+      <select v-model="model">
+        <option value="-1" disabled>Select</option>
+
+        <optgroup
+          v-for="group in groups"
+          :key="group.label"
+          :label="group.label"
         >
-          {{ option.label }}
-        </option>
-      </optgroup>
-    </select>
+          <option
+            v-for="option in group.options"
+            :key="group.label + option.label"
+            :value="option.value"
+          >
+            {{ option.label }}
+          </option>
+        </optgroup>
+      </select>
+    </label>
   </div>
 </template>
 
@@ -106,6 +110,10 @@ const model = defineModel()
     border-left: none;
     transform: translateY(-50%) rotate(45deg);
     content: '';
+  }
+
+  span {
+    margin-left: -8px;
   }
 
   select {
